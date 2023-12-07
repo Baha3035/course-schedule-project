@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/main_navigation_graph">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation_graph"
+    app:startDestination="@id/mainPageFragment">
 
+    <fragment
+        android:id="@+id/mainPageFragment"
+        android:name="com.alatoo.coursescheduler.MainPageFragment"
+        android:label="fragment_main_page"
+        tools:layout="@layout/fragment_main_page" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.alatoo.coursescheduler.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/checkListFragment"
+        android:name="com.alatoo.coursescheduler.CheckListFragment"
+        android:label="fragment_check_list"
+        tools:layout="@layout/fragment_check_list" />
 </navigation>

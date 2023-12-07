@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/mainPageFragment"
+        android:title="Main"
+        android:icon="@drawable/main_page_icon" />
+
+    <item
+        android:id="@+id/checkListFragment"
+        android:title="Check List"
+        android:icon="@drawable/check_list_icon"/>
+
+    <item
+        android:id="@+id/profileFragment"
+        android:title="Profile"
+        android:icon="@drawable/profile_page_icon"/>
+
+</menu>
