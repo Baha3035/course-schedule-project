@@ -1,8 +1,9 @@
-package com.alatoo.coursescheduler
+package com.alatoo.coursescheduler.ui.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.alatoo.coursescheduler.MainActivity
 import com.alatoo.coursescheduler.databinding.ActivityRegistrationBinding
 
 class RegistrationActivity : AppCompatActivity() {

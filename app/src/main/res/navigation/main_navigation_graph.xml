@@ -7,22 +7,22 @@
 
     <fragment
         android:id="@+id/mainPageFragment"
-        android:name="com.alatoo.coursescheduler.MainPageFragment"
+        android:name="com.alatoo.coursescheduler.ui.fragments.MainPageFragment"
         android:label="fragment_main_page"
         tools:layout="@layout/fragment_main_page" />
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.alatoo.coursescheduler.ProfileFragment"
+        android:name="com.alatoo.coursescheduler.ui.fragments.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
     <fragment
         android:id="@+id/checkListFragment"
-        android:name="com.alatoo.coursescheduler.CheckListFragment"
+        android:name="com.alatoo.coursescheduler.ui.fragments.CheckListFragment"
         android:label="fragment_check_list"
         tools:layout="@layout/fragment_check_list" />
     <fragment
         android:id="@+id/editProfileFragment"
-        android:name="com.alatoo.coursescheduler.EditProfileFragment"
+        android:name="com.alatoo.coursescheduler.ui.fragments.EditProfileFragment"
         android:label="fragment_edit_profile"
         tools:layout="@layout/fragment_edit_profile" />
 </navigation>

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
+import com.alatoo.coursescheduler.R
 import com.alatoo.coursescheduler.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

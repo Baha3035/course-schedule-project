@@ -1,22 +1,22 @@
-package com.alatoo.coursescheduler
+package com.alatoo.coursescheduler.ui.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.alatoo.coursescheduler.databinding.FragmentMainPageBinding
+import com.alatoo.coursescheduler.databinding.FragmentProfileBinding
 
-class MainPageFragment : Fragment() {
+class ProfileFragment : Fragment() {
 
-    lateinit var binding: FragmentMainPageBinding
+    private lateinit var binding: FragmentProfileBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        binding = FragmentMainPageBinding.inflate(layoutInflater, container, false)
+        binding = FragmentProfileBinding.inflate(layoutInflater, container, false)
         return binding.root
     }
 
