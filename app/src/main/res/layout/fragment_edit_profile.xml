@@ -30,6 +30,9 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:boxStrokeWidthFocused="0dp"
+        app:boxStrokeWidth="0dp"
+        android:background="@color/edit_text_bg"
         android:layout_marginTop="5dp">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -52,7 +55,11 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp">
+        android:layout_marginBottom="30dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:boxStrokeWidth="0dp"
+        android:background="@color/edit_text_bg"
+        >
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
