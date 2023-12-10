@@ -5,7 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.lifecycleScope
 import com.alatoo.coursescheduler.databinding.FragmentMainPageBinding
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class MainPageFragment : Fragment() {
 
@@ -22,6 +26,13 @@ class MainPageFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        viewLifecycleOwner.lifecycleScope.launch {
+            withContext(Dispatchers.IO){
+//                val scheduleGetter = ScheduleGetter()
+//                val result = scheduleGetter.getCourseSchedule("COM-20", "MONDAY")
+//                println(result)
+            }
+        }
     }
 
 }
