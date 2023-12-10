@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
+import com.alatoo.coursescheduler.R
 import com.alatoo.coursescheduler.databinding.FragmentProfileBinding
 
 class ProfileFragment : Fragment() {
@@ -22,6 +24,12 @@ class ProfileFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.optionsBtn.setOnClickListener {
+            findNavController().navigate(R.id.action_profileFragment_to_academicCalendarFragment)
+        }
+        binding.editBtn.setOnClickListener {
+            findNavController().navigate(R.id.action_profileFragment_to_editProfileFragment)
+        }
     }
 
 }

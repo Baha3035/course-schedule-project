@@ -18,6 +18,9 @@
         <action
             android:id="@+id/action_profileFragment_to_editProfileFragment"
             app:destination="@id/editProfileFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_academicCalendarFragment"
+            app:destination="@id/academicCalendarFragment" />
     </fragment>
     <fragment
         android:id="@+id/checkListFragment"
@@ -29,4 +32,9 @@
         android:name="com.alatoo.coursescheduler.ui.fragments.EditProfileFragment"
         android:label="fragment_edit_profile"
         tools:layout="@layout/fragment_edit_profile" />
+    <fragment
+        android:id="@+id/academicCalendarFragment"
+        android:name="com.alatoo.coursescheduler.ui.fragments.AcademicCalendarFragment"
+        android:label="fragment_academic_calendar"
+        tools:layout="@layout/fragment_academic_calendar" />
 </navigation>

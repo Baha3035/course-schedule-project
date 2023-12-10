@@ -19,6 +19,7 @@ tools:context=".ui.fragments.MainPageFragment">
         android:textSize="18sp"
         android:textStyle="bold"
         android:textColor="@color/black"
+        android:layout_marginBottom="18dp"
         android:layout_gravity="center"/>
 
     <androidx.recyclerview.widget.RecyclerView
@@ -32,6 +33,7 @@ tools:context=".ui.fragments.MainPageFragment">
         android:text="Tuesday"
         android:textSize="18sp"
         android:textStyle="bold"
+        android:layout_marginBottom="18dp"
         android:textColor="@color/black"
         android:layout_gravity="center"/>
 
@@ -46,6 +48,7 @@ tools:context=".ui.fragments.MainPageFragment">
         android:text="Wednesday"
         android:textSize="18sp"
         android:textStyle="bold"
+        android:layout_marginBottom="18dp"
         android:textColor="@color/black"
         android:layout_gravity="center"/>
 
@@ -60,6 +63,7 @@ tools:context=".ui.fragments.MainPageFragment">
         android:text="Thursday"
         android:textSize="18sp"
         android:textStyle="bold"
+        android:layout_marginBottom="18dp"
         android:textColor="@color/black"
         android:layout_gravity="center"/>
 
@@ -74,6 +78,7 @@ tools:context=".ui.fragments.MainPageFragment">
         android:layout_height="wrap_content"
         android:text="Friday"
         android:textSize="18sp"
+        android:layout_marginBottom="18dp"
         android:textStyle="bold"
         android:textColor="@color/black"
         android:layout_gravity="center"/>
@@ -90,6 +95,7 @@ tools:context=".ui.fragments.MainPageFragment">
         android:text="Saturday"
         android:textSize="18sp"
         android:textStyle="bold"
+        android:layout_marginBottom="18dp"
         android:textColor="@color/black"
         android:layout_gravity="center"/>
 

@@ -8,18 +8,26 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:background="@drawable/schedule_item_background">
 
         <CheckBox
             android:id="@+id/checkbox"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/white"
+            android:layout_marginVertical="18dp"
+            android:layout_marginStart="22dp"/>
 
         <TextView
             android:id="@+id/taskNameTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="task"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_gravity="center"
             android:layout_marginEnd="10dp"/>
 
     </LinearLayout>
