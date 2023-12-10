@@ -32,4 +32,5 @@ class CheckListRvAdapter: RecyclerView.Adapter<CheckListRvAdapter.ViewHolder>() 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(items[position])
     }
+
 }
