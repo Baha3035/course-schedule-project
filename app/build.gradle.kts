@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id ("kotlin-parcelize")
     id ("kotlin-kapt")
 }
 
@@ -54,9 +55,14 @@ dependencies {
     implementation("com.google.api-client:google-api-client-android:1.22.0")
     implementation("com.android.support:support-annotations:22.2.0")
 
+
+
     //main
+
     implementation("androidx.core:core-ktx:1.12.0")
+
     implementation("androidx.appcompat:appcompat:1.6.1")
+
     implementation("com.google.android.material:material:1.10.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     testImplementation("junit:junit:4.13.2")
@@ -68,12 +74,8 @@ dependencies {
     implementation("androidx.navigation:navigation-ui-ktx:2.7.5")
 
     //room
-    implementation ("androidx.room:room-ktx:2.5.2")
-    kapt("androidx.room:room-compiler:2.5.2")
+    implementation ("androidx.room:room-ktx:2.5.1")
+    kapt("androidx.room:room-compiler:2.5.1")
 
-    //retrofit
-    implementation("com.google.code.gson:gson:2.9.0")
-    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation ("com.squareup.retrofit2:converter-gson:2.6.0")
 
 }

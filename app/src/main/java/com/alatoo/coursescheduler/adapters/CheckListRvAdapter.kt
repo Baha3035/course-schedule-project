@@ -10,18 +10,22 @@ import com.alatoo.coursescheduler.entities.TaskItem
 
 class CheckListRvAdapter: RecyclerView.Adapter<CheckListRvAdapter.ViewHolder>() {
 
-    private val items: List<TaskItem> = emptyList()
+    private var items: List<TaskItem> = emptyList()
+
+    var delete : ((TaskItem) -> Unit)? = null
+    var update: ((TaskItem) -> Unit)? = null
+
 
     inner class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         val binding = CheckListItemBinding.bind(itemView)
         fun bind(item: TaskItem){
             binding.taskNameTxt.text = item.name
-            binding.checkbox.isChecked = item.done
+            binding.checkbox.isChecked = item.done!!
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.activity_main, parent, false)
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.check_list_item, parent, false)
         return ViewHolder(itemView)
     }
 
@@ -31,6 +35,14 @@ class CheckListRvAdapter: RecyclerView.Adapter<CheckListRvAdapter.ViewHolder>() 
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(items[position])
+        holder.binding.checkbox.setOnClickListener {
+            items[position].done = holder.binding.checkbox.isChecked
+        }
+    }
+
+    fun setList(newList: List<TaskItem>) {
+        items = newList
+        notifyDataSetChanged()
     }
 
 }

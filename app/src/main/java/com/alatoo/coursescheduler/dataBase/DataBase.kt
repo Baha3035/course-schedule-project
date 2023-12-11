@@ -6,7 +6,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.alatoo.coursescheduler.entities.TaskItem
 
-@Database(entities = [TaskItem::class], version = 1,  exportSchema = false)
+@Database(entities = [TaskItem::class], version = 1, exportSchema = false)
 abstract class DataBase: RoomDatabase() {
     abstract fun taskItemDao(): TaskItemDao
 

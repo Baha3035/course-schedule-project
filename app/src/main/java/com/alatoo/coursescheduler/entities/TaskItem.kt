@@ -1,13 +1,15 @@
 package com.alatoo.coursescheduler.entities
 
+import android.os.Parcelable
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import java.io.Serializable
+import kotlinx.android.parcel.Parcelize
 
-@Entity
+@Entity("tasks")
+@Parcelize
 data class TaskItem(
     @PrimaryKey(autoGenerate = true)
-    val id: Int,
-    val name: String,
-    val done: Boolean = false
-): Serializable
+    var id: Int,
+    var name: String,
+    var done: Boolean? = false
+): Parcelable
