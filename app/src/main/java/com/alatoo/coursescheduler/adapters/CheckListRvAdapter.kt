@@ -35,9 +35,17 @@ class CheckListRvAdapter: RecyclerView.Adapter<CheckListRvAdapter.ViewHolder>() 
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(items[position])
-        holder.binding.checkbox.setOnClickListener {
-            items[position].done = holder.binding.checkbox.isChecked
+        holder.binding.checkbox.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) {
+                items[position].done = true
+                update?.invoke(items[position])
+            }else{
+                items[position].done = false
+                update?.invoke(items[position])
+            }
+
         }
+
     }
 
     fun setList(newList: List<TaskItem>) {
