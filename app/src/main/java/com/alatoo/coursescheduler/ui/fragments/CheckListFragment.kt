@@ -16,7 +16,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.alatoo.coursescheduler.R
 import com.alatoo.coursescheduler.adapters.CheckListRvAdapter
 import com.alatoo.coursescheduler.dataBase.DataBase
-import com.alatoo.coursescheduler.dataBase.Repository
+import com.alatoo.coursescheduler.repository.Repository
 import com.alatoo.coursescheduler.databinding.FragmentCheckListBinding
 import com.alatoo.coursescheduler.entities.TaskItem
 import com.alatoo.coursescheduler.viewModels.MainViewModel

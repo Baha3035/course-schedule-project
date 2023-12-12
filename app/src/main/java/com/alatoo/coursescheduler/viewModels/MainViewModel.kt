@@ -2,7 +2,7 @@ package com.alatoo.coursescheduler.viewModels
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.alatoo.coursescheduler.dataBase.Repository
+import com.alatoo.coursescheduler.repository.Repository
 import com.alatoo.coursescheduler.entities.TaskItem
 import kotlinx.coroutines.launch
 

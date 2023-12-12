@@ -1,5 +1,6 @@
-package com.alatoo.coursescheduler.dataBase
+package com.alatoo.coursescheduler.repository
 
+import com.alatoo.coursescheduler.dataBase.TaskItemDao
 import com.alatoo.coursescheduler.entities.TaskItem
 
 class Repository(private val db: TaskItemDao){
