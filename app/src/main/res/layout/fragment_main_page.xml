@@ -19,13 +19,13 @@ tools:context=".ui.fragments.MainPageFragment">
         android:textSize="18sp"
         android:textStyle="bold"
         android:textColor="@color/black"
-        android:layout_marginBottom="18dp"
+        android:layout_marginVertical="18dp"
         android:layout_gravity="center"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/mondayRv"
         android:layout_width="match_parent"
-        android:layout_height="200dp"/>
+        android:layout_height="120dp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -33,14 +33,14 @@ tools:context=".ui.fragments.MainPageFragment">
         android:text="Tuesday"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:layout_marginBottom="18dp"
+        android:layout_marginVertical="18dp"
         android:textColor="@color/black"
         android:layout_gravity="center"/>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/tuestayRv"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"/>
+            android:id="@+id/tuestayRv"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -48,14 +48,14 @@ tools:context=".ui.fragments.MainPageFragment">
         android:text="Wednesday"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:layout_marginBottom="18dp"
+        android:layout_marginVertical="18dp"
         android:textColor="@color/black"
         android:layout_gravity="center"/>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/wednesdayRv"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"/>
+            android:id="@+id/wednesdayRv"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -63,14 +63,14 @@ tools:context=".ui.fragments.MainPageFragment">
         android:text="Thursday"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:layout_marginBottom="18dp"
+        android:layout_marginVertical="18dp"
         android:textColor="@color/black"
         android:layout_gravity="center"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/thursdayRv"
         android:layout_width="match_parent"
-        android:layout_height="200dp"/>
+        android:layout_height="120dp"/>
 
 
     <TextView
@@ -78,7 +78,7 @@ tools:context=".ui.fragments.MainPageFragment">
         android:layout_height="wrap_content"
         android:text="Friday"
         android:textSize="18sp"
-        android:layout_marginBottom="18dp"
+        android:layout_marginVertical="18dp"
         android:textStyle="bold"
         android:textColor="@color/black"
         android:layout_gravity="center"/>
@@ -86,7 +86,7 @@ tools:context=".ui.fragments.MainPageFragment">
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/fridayRv"
         android:layout_width="match_parent"
-        android:layout_height="200dp"/>
+        android:layout_height="120dp"/>
 
 
     <TextView
@@ -95,14 +95,14 @@ tools:context=".ui.fragments.MainPageFragment">
         android:text="Saturday"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:layout_marginBottom="18dp"
+        android:layout_marginVertical="18dp"
         android:textColor="@color/black"
         android:layout_gravity="center"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/saturdayRv"
         android:layout_width="match_parent"
-        android:layout_height="200dp"/>
+        android:layout_height="120dp"/>
 
 </LinearLayout>
 

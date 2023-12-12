@@ -5,11 +5,11 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import kotlinx.android.parcel.Parcelize
 
-@Entity("tasks")
+@Entity("user")
 @Parcelize
-data class TaskItem(
+data class User(
     @PrimaryKey(autoGenerate = true)
     var id: Int,
     var name: String,
-    var done: Boolean? = false
+    val course: String
 ): Parcelable

@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id ("kotlin-parcelize")
     id ("kotlin-kapt")
 }
 
@@ -43,16 +44,20 @@ android {
 }
 
 dependencies {
+
     //google sheets api
     implementation("com.google.api-client:google-api-client:2.0.0")
     implementation("com.google.oauth-client:google-oauth-client-jetty:1.34.1")
     implementation("com.google.apis:google-api-services-sheets:v4-rev20220927-2.0.0")
+    //noinspection UseOfBundledGooglePlayServices
     implementation("com.google.android.gms:play-services:12.0.1")
     implementation("pub.devrel:easypermissions:3.0.0")
     implementation("com.google.api-client:google-api-client-jackson2:1.20.0")
     implementation("com.google.api-client:google-api-client:2.0.0")
     implementation("com.google.api-client:google-api-client-android:1.22.0")
-    implementation("com.android.support:support-annotations:22.2.0")
+    implementation("com.android.support:support-annotations:28.0.0")
+
+
 
     //main
     implementation("androidx.core:core-ktx:1.12.0")
@@ -68,12 +73,13 @@ dependencies {
     implementation("androidx.navigation:navigation-ui-ktx:2.7.5")
 
     //room
-    implementation ("androidx.room:room-ktx:2.5.2")
-    kapt("androidx.room:room-compiler:2.5.2")
+    implementation ("androidx.room:room-ktx:2.5.1")
+    kapt("androidx.room:room-compiler:2.5.1")
 
     //retrofit
-    implementation("com.google.code.gson:gson:2.9.0")
-    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation ("com.google.code.gson:gson:2.8.6")
+    implementation ("com.squareup.retrofit2:retrofit:2.6.0")
     implementation ("com.squareup.retrofit2:converter-gson:2.6.0")
+
 
 }
