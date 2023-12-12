@@ -38,13 +38,16 @@ class MainPageFragment : Fragment() {
 
         viewModel.getSchedule()
         viewModel.scheduleResponse.observe(viewLifecycleOwner, Observer{
+            val time = ArrayList<String>(it.values[2])
+            time.remove("")
+            time.remove("")
             courses = filterScheduleGroup(it.values)
-            setMonday(courses[0])
-            setTuesday(courses[1])
-            setWednesday(courses[2])
-            setThursday(courses[3])
-            setFriday(courses[4])
-            setSaturday(courses[5])
+            setMonday(courses[0], time)
+            setTuesday(courses[1], time)
+            setWednesday(courses[2], time)
+            setThursday(courses[3], time)
+            setFriday(courses[4], time)
+            setSaturday(courses[5], time)
         })
 
     }
@@ -61,57 +64,57 @@ class MainPageFragment : Fragment() {
     }
 
 
-    fun setMonday(courses: List<String>){
+    fun setMonday(courses: List<String>, time: ArrayList<String>){
         binding.mondayRv.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
         val array = ArrayList<String>(courses)
         array.removeAt(0)
         array.remove(Constants.USER_GROUP)
-        adapter1.setItem(array)
+        adapter1.setItem(array, time)
         binding.mondayRv.adapter = adapter1
     }
 
-    fun setTuesday(courses: List<String>){
+    fun setTuesday(courses: List<String>, time: ArrayList<String>){
         binding.tuestayRv.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
         val array = ArrayList<String>(courses)
         array.removeAt(0)
         array.remove(Constants.USER_GROUP)
-        adapter2.setItem(array)
+        adapter2.setItem(array, time)
         binding.tuestayRv.adapter = adapter2
     }
 
-    fun setWednesday(courses: List<String>){
+    fun setWednesday(courses: List<String>, time: ArrayList<String>){
         binding.wednesdayRv.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
         val array = ArrayList<String>(courses)
         array.removeAt(0)
         array.remove(Constants.USER_GROUP)
-        adapter3.setItem(array)
+        adapter3.setItem(array, time)
         binding.wednesdayRv.adapter = adapter3
     }
 
-    fun setThursday(courses: List<String>){
+    fun setThursday(courses: List<String>, time: ArrayList<String>){
         binding.thursdayRv.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
         val array = ArrayList<String>(courses)
         array.removeAt(0)
         array.remove(Constants.USER_GROUP)
-        adapter4.setItem(array)
+        adapter4.setItem(array, time)
         binding.thursdayRv.adapter = adapter4
     }
 
-    fun setFriday(courses: List<String>){
+    fun setFriday(courses: List<String>, time: ArrayList<String>){
         binding.fridayRv.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
         val array = ArrayList<String>(courses)
         array.removeAt(0)
         array.remove(Constants.USER_GROUP)
-        adapter5.setItem(array)
+        adapter5.setItem(array, time)
         binding.fridayRv.adapter = adapter5
     }
 
-    fun setSaturday(courses: List<String>){
+    fun setSaturday(courses: List<String>, time: ArrayList<String>){
         binding.saturdayRv.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
         val array = ArrayList<String>(courses)
         array.removeAt(0)
         array.remove(Constants.USER_GROUP)
-        adapter6.setItem(array)
+        adapter6.setItem(array, time)
         binding.saturdayRv.adapter = adapter6
     }
 

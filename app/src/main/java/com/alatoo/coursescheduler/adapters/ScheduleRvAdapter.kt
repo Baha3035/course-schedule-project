@@ -10,11 +10,13 @@ import com.alatoo.coursescheduler.databinding.ScheduleHolderItemBinding
 class ScheduleRvAdapter: RecyclerView.Adapter<ScheduleRvAdapter.ViewHolder>() {
 
     private var items: ArrayList<String> = ArrayList()
+    private var times: ArrayList<String> = ArrayList()
 
     inner class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         val binding = ScheduleHolderItemBinding.bind(itemView)
         fun bind(item: String, time: String){
             binding.subjectNameTxt.text = item
+            binding.timeTxt.text = time
         }
     }
 
@@ -28,11 +30,12 @@ class ScheduleRvAdapter: RecyclerView.Adapter<ScheduleRvAdapter.ViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(items[position], "9:00 - 9:55")
+        holder.bind(items[position], times[position])
     }
 
-    fun setItem(newItems: ArrayList<String>){
+    fun setItem(newItems: ArrayList<String>, newTime: ArrayList<String>){
         items = newItems
+        times = newTime
         notifyDataSetChanged()
     }
 
