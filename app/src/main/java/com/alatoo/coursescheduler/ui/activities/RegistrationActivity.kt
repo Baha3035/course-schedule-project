@@ -24,15 +24,7 @@ class RegistrationActivity : AppCompatActivity() {
         var db = DataBase.getDatabase(this).userDao()
         val repository = UserRepository(db)
         viewModel = UserViewModel(repository)
-        viewModel.user.observe(this, Observer{
-            if(!it.isEmpty()){
-                Constants.USER_GROUP = it[0].course
-                val intent = Intent(this, MainActivity::class.java)
-                startActivity(intent)
-                finish()
-            }
 
-        })
         binding.registerBtn.setOnClickListener{
             val group = binding.groupEditText.text.toString()
             val userName = binding.nameEditText.text.toString()
