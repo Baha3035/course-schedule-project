@@ -6,7 +6,9 @@ import android.os.Bundle
 import androidx.lifecycle.Observer
 import com.alatoo.coursescheduler.MainActivity
 import com.alatoo.coursescheduler.R
+import com.alatoo.coursescheduler.dataBase.DataBase
 import com.alatoo.coursescheduler.databinding.ActivitySplashScreenBinding
+import com.alatoo.coursescheduler.repository.UserRepository
 import com.alatoo.coursescheduler.utils.Constants
 import com.alatoo.coursescheduler.viewModels.UserViewModel
 
@@ -17,6 +19,10 @@ class SplashScreenActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivitySplashScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        var db = DataBase.getDatabase(this).userDao()
+        val repository = UserRepository(db)
+        viewModel = UserViewModel(repository)
 
         binding.root.alpha = 0f
         binding.root.animate().setDuration(2500).alpha(1f).withEndAction{
