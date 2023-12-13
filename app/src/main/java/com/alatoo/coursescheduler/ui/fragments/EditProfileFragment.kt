@@ -11,6 +11,7 @@ import com.alatoo.coursescheduler.dataBase.DataBase
 import com.alatoo.coursescheduler.repository.UserRepository
 import com.alatoo.coursescheduler.databinding.FragmentEditProfileBinding
 import com.alatoo.coursescheduler.entities.User
+import com.alatoo.coursescheduler.utils.Constants
 import com.alatoo.coursescheduler.viewModels.UserViewModel
 
 class EditProfileFragment : Fragment() {
@@ -45,6 +46,7 @@ class EditProfileFragment : Fragment() {
             val name = binding.nameEditText.text.toString()
             val group = binding.groupEditText.text.toString()
             val user = User(id,name, group)
+            Constants.USER_GROUP = group
             viewModel.update(user)
             findNavController().navigateUp()
         }

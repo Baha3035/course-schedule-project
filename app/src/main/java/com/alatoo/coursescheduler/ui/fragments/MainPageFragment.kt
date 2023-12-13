@@ -21,26 +21,27 @@ class MainPageFragment : Fragment() {
     val adapter4 = ScheduleRvAdapter()
     val adapter5 = ScheduleRvAdapter()
     val adapter6 = ScheduleRvAdapter()
+    val viewModel = ScheduleViewModel()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+        viewModel.getSchedule()
         binding = FragmentMainPageBinding.inflate(layoutInflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        val viewModel = ScheduleViewModel()
         super.onViewCreated(view, savedInstanceState)
         var courses: List<List<String>> = emptyList()
 
         viewModel.getSchedule()
         viewModel.scheduleResponse.observe(viewLifecycleOwner, Observer{
             val time = ArrayList<String>(it.values[2])
-            time.remove("")
-            time.remove("")
+            time.removeAt(0)
+            time.removeAt(0)
             courses = filterScheduleGroup(it.values)
             setMonday(courses[0], time)
             setTuesday(courses[1], time)
@@ -50,6 +51,11 @@ class MainPageFragment : Fragment() {
             setSaturday(courses[5], time)
         })
 
+    }
+
+    override fun onViewStateRestored(savedInstanceState: Bundle?) {
+        super.onViewStateRestored(savedInstanceState)
+        viewModel.getSchedule()
     }
 
     fun filterScheduleGroup(schedule: List<List<String>>): List<List<String>> {
